@@ -1,4 +1,4 @@
-﻿using ProjetoExperimental01;
+﻿using ProjetoExperimental01.IAgenEX02;
 using System;
 
-IAgenEX01.Main(args);
+Exercicio02Runner.Main(args);
