@@ -11,6 +11,7 @@ namespace ProjetoExperimental01.IAgenEX02.Models
         public Desenvolvedor(string nome, decimal salarioBase, NivelSenioridade senioridade, string principaisLinguagens)
             : base(nome, salarioBase, senioridade)
         {
+            ArgumentException.ThrowIfNullOrWhiteSpace(principaisLinguagens, nameof(principaisLinguagens));
             PrincipaisLinguagens = principaisLinguagens;
         }
     }
