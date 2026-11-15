@@ -7,7 +7,7 @@ namespace ProjetoExperimental01.IAgenEX02.Models
 {
     public class Desenvolvedor : Funcionario
     {
-        public string PrincipaisLinguagens { get; set; }
+        public string PrincipaisLinguagens { get; private set; }
         public Desenvolvedor(string nome, decimal salarioBase, NivelSenioridade senioridade, string principaisLinguagens)
             : base(nome, salarioBase, senioridade)
         {

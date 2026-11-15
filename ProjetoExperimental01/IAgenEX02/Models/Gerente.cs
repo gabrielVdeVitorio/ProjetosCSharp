@@ -7,7 +7,7 @@ namespace ProjetoExperimental01.IAgenEX02.Models
 {
     public class Gerente : Funcionario
     {
-        public int TamanhoEquipe { get; set; }
+        public int TamanhoEquipe { get; private set; }
         public Gerente(string nome, decimal salarioBase, NivelSenioridade senioridade, int tamanhoEquipe)
             : base(nome, salarioBase, senioridade)
         {
