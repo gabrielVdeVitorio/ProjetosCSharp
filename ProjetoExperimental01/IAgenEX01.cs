@@ -12,18 +12,18 @@ namespace ProjetoExperimental01
 
     public class IAgenEX01: ICandidato
     {
-        private string _nome;
-        private int _idade;
+        private string nome;
+        private int idade;
         public string Nome
         {
-            get => _nome;
-            set => _nome = value.Length < 1 ? throw new ArgumentException("Nome não pode ser vazio") : value.Trim();
+            get => nome;
+            set => nome = value.Length < 1 ? throw new ArgumentException("Nome não pode ser vazio") : value.Trim();
         }
 
         public int Idade
         {
-            get => _idade;
-            set => _idade = value < 14 ? throw new ArgumentException("Idade não pode ser menor do que 14 anos") : value;
+            get => idade;
+            set => idade = value < 14 ? throw new ArgumentException("Idade não pode ser menor do que 14 anos") : value;
         }
 
         public static void Main(string[] args)
