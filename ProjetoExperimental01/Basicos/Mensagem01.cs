@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProjetoExperimental01
+namespace ProjetoExperimental01.Basicos
 {
     internal class Mensagem01
     {
