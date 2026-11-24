@@ -1,36 +1,17 @@
-﻿using System;
+﻿using ProjetoExperimental01.IAgenEX01.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProjetoExperimental01
+namespace ProjetoExperimental01.IAgenEX01
 {
-    interface ICandidato
+    internal class Exercicio01Runner
     {
-        string Nome { get; set; }
-        int Idade { get; set; }
-    }
-
-    public class IAgenEX01: ICandidato
-    {
-        private string nome;
-        private int idade;
-        public string Nome
-        {
-            get => nome;
-            set => nome = value.Length < 1 ? throw new ArgumentException("Nome não pode ser vazio") : value.Trim();
-        }
-
-        public int Idade
-        {
-            get => idade;
-            set => idade = value < 14 ? throw new ArgumentException("Idade não pode ser menor do que 14 anos") : value;
-        }
-
         public static void Main(string[] args)
         {
             try
             {
-                IAgenEX01 candidato = new IAgenEX01();
+                Candidato candidato = new Candidato();
                 Console.WriteLine("-- Cadastro de Candidato --");
                 Console.WriteLine("Digite o nome do candidato:");
                 string nome = Console.ReadLine();
@@ -50,7 +31,7 @@ namespace ProjetoExperimental01
 
                         break;
                     }
-                    catch(ArgumentException ex)
+                    catch (ArgumentException ex)
                     {
                         Console.WriteLine($"Erro: {ex.Message}\n");
                         Console.WriteLine("Digite a idade do candidato novamente:");
