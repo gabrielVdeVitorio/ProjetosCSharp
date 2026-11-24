@@ -4,5 +4,5 @@ using System.Text;
 
 namespace ProjetoExperimental01.IAgenEX03.Records
 {
-    public record CandidatoDto ( string Nome, string DataDeNascimento, string Cpf, string CursoDeInteresse );
+    public record CandidatoDto ();
 }

@@ -9,21 +9,17 @@ namespace ProjetoExperimental01.IAgenEX03.Models
 {
     public class BancoDeTalentos : IBancoDeTalentos
     {
-        private readonly Dictionary<string, CandidatoDto> _candidatos = new();
-        public void AdicionarCandidato(CandidatoDto candidato)
+        private readonly Dictionary<string, Candidato> _candidatos = new();
+        public void AdicionarCandidato(Candidato candidato)
         {
             if ( _candidatos.TryAdd(candidato.Cpf, candidato ) )
             {
                 throw new ArgumentException($"Já existe um candidato cadastrado com o CPF {candidato.Cpf}.");
             }
         }
-        public Candidato BuscarCandidatoPorCpf()
+        public Candidato BuscarCandidatoPorCpf(string cpf)
         {
-
-        }
-        protected BancoDeTalentos()
-        {
-
+            return _candidatos[cpf];
         }
     }
 }

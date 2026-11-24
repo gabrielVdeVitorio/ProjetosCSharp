@@ -12,13 +12,12 @@ namespace ProjetoExperimental01.IAgenEX03
     {
         public static void Main(string[] args)
         {
-            var candidatos = new List<CandidatoDto>
-            {
-                new CandidatoDto("Gabriel Vitório", "24-02-2000", "01234567890", "Desenvolvimento web em C#.NET"),
-                new CandidatoDto("Caio de Lima Oliveira", "14-05-2005", "09876543210", "Desenvolvimento web em Java"),
-                new CandidatoDto("Gabriel Marinho", "18-08-2002", "19283746503", "Desenvolvimento mobile em Kotlin")
-            }.ToDictionary(Candidato => Candidato.Cpf);
-            Console.WriteLine(candidatos["01234567890"].Nome);
+            BancoDeTalentos bancoDeTalentos = new BancoDeTalentos();
+            bancoDeTalentos.AdicionarCandidato(new Candidato("Gabriel Vitório", "24-02-2000", "01234567890", "Desenvolvimento web em C#.NET"));
+            bancoDeTalentos.AdicionarCandidato(new Candidato("Caio de Lima Oliveira", "14-05-2005", "09876543210", "Desenvolvimento web em Java"));
+            bancoDeTalentos.AdicionarCandidato(new Candidato("Gabriel Marinho", "18-08-2002", "19283746503", "Desenvolvimento mobile em Kotlin"));
+            
+            Console.WriteLine(bancoDeTalentos.BuscarCandidatoPorCpf("01234567890").Nome);
         }
     }
 }
